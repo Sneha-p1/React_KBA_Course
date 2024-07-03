@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const AddCoursePage = () => {
   const [title,setTitle] = useState('')
@@ -18,8 +19,11 @@ const AddCoursePage = () => {
       description,
       price
     }
-    const res = addCourseSubmit(newCourse)
+    const res = addCourseSubmit(newCourse);
+    toast.success("added successfully")
+    
     navigate('/courses')
+
   }
   const addCourseSubmit = async (newCourse) => {
     const res = await fetch('/api/courses',{
