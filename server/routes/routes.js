@@ -56,8 +56,14 @@ router.put("/courses/:id", async (req, res) => {
   }
 });
 
-router.delete("/courses/:id", async (req, res) => {
+router.delete("/courses/:id",verifyToken, async (req, res) => {
   const courseId = req.params.id;
+  if(req.userType != 'admin'){
+    return res
+    .status(401)
+    .json({ error: "Authentication failed- User doesn't exists" });
+  }
+  
   try {
     const result = await courses.findOneAndDelete({ courseId: courseId });
     if (!result) {

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../theme_files/images/kbalogo.png'
+import Logout from './Logout'
 function Navbar() {
     
     return (
@@ -19,6 +20,7 @@ function Navbar() {
         <Link to={'/courses'} className='ml-20'>Courses</Link>
         <Link to={'/contact'} className='ml-20'>Contact Us</Link>
         <Link to={'/add-course'} className='ml-20'>Add Course</Link>
+        <Logout/>
     </div>
 </div>
 </>
