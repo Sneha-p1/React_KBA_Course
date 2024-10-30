@@ -15,9 +15,9 @@ This project is a web application designed to showcase various blockchain-relate
 - Docker Compose installed on your machine
 
 ## Clone the Repository
-First, clone the repository from GitHub: git clone [repo-url] cd 
+First, clone the repository from GitHub: git clone [repo-url] cd Foldername
 
-Next, use Docker Compose to build and run the containers:
+## Next, use Docker Compose to build and run the containers:
 docker-compose up --build
 
 This command will build the Docker images and start the containers for the application and MongoDB database.Once the containers are running, you can access the application in your web browser at:
